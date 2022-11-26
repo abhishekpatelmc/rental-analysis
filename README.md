@@ -4,4 +4,4 @@
 
 - [Second Model](/secondModel/SecondModel.ipynb)
 
-- [Regresson Model](/RegressionModel(26-11-2022)/lr.ipynb)
+- [Regresson Model](https://github.com/abhishekpatelmc/rental-analysis/blob/RegressionModel(26-11-2022)/lr.ipynb)

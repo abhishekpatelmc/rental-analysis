@@ -1,11 +1,14 @@
 # Building API 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from mangum import Mangum
 import numpy as np
 import pickle
 import json
 
 app = FastAPI()
+
+handler = Mangum(app, lifespan="off")
 
 class RentItem(BaseModel):
    region: str

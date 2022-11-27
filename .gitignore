@@ -1,3 +1,6 @@
 .venv
 fastml
 __pycache__
+lib
+*.zip
+

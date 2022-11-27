@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
+import pickle
 from pymongo import MongoClient
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -97,4 +98,14 @@ def predict_price(region,sqfeet, baths, beds):
 
 #region, sqfeet, baths, beds
 print("Price: ",predict_price('birmingham',1900, 3, 2))
-   
+
+# import json
+# columns = {
+#     'data_columns': [col.lower() for col in X.columns]
+# }
+# with open('columns.json', 'w') as f:
+#     f.write(json.dumps(columns))
+
+pickleFile = open("rentAnalyser.pkl","wb")
+pickle.dump(regressor, pickleFile)
+pickleFile.close()

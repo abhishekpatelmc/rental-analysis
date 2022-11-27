@@ -1,8 +1,6 @@
 # Building API 
 from fastapi import FastAPI
 from pydantic import BaseModel
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
 import numpy as np
 import pickle
 import json
@@ -51,5 +49,5 @@ async def rentModelEndpoint(item: RentItem):
     baths = item.baths
     beds = item.beds
     prediction = get_estimated_price(region, sqfeet, beds, baths)
-    return prediction
+    return {"price": prediction}
 

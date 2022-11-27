@@ -16,10 +16,10 @@ class RentItem(BaseModel):
    baths: float
    beds: float
 
-with open('./saved/rentAnalyser.pkl', 'rb') as f:
+with open('./model/rentAnalyser.pkl', 'rb') as f:
     model = pickle.load(f)
 
-with open("./saved/columns.json", "r") as f:
+with open("./model/columns.json", "r") as f:
     data_columns = json.load(f)['data_columns']
 
 def get_estimated_price(region, sqfeet, beds, baths):

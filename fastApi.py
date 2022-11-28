@@ -1,6 +1,7 @@
 # Building API 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import pickle
 import json
@@ -13,6 +14,20 @@ class RentItem(BaseModel):
    baths: float
    beds: float
 
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+      
 with open('./saved/rentAnalyser.pkl', 'rb') as f:
     model = pickle.load(f)
 

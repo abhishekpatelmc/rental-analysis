@@ -1,3 +1,0 @@
-# Rental Analysis
-
-# Frontend

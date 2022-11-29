@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [data, setData] = useState();
@@ -35,30 +36,32 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black h-screen">
-      <div className="text-center text-3xl pt-6 text-cyan-200">
+    <div className="bg-slate-200 h-screen">
+      <div className="text-center text-3xl pt-6 text-cyan-800">
         <h1>Rent Analysis</h1>
       </div>
 
-      <div className="border-1 mt-8 ml-14 mr-14 mb-14 pl-16 pr-16 pt-16 pb-14 justify-center shadow-xl rounded-3xl bg-gray-100">
+      <div className="border-1 mt-8 ml-14 mr-14 mb-14 pl-16 pr-16 pt-16 pb-14 justify-center shadow-xl rounded-3xl bg-opacity-50 bg-gray-100">
         <div className="flex flex-row justify-center">
           {/* Left Sidde */}
           <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
-            <h1>Rent Analysis</h1>
-            <p className=" mt-5 pr-10">
+            <p className=" mt-5 pr-10 text-justify">
               This is a rent analysis tool that will help you Analys the rent of
               a region. You need to enter the Region, number of bedrooms, number
               of bathrooms and the Square feet required.
             </p>
+            <div className="mt-16 flex items-center justify-center">
+              <Image src="/cat.svg" height={300} width={300} alt="cat" />
+            </div>
           </div>
           {/* Right Side */}
           <div className="ml-10 flex-1 basis-1/2 ">
             <div className="flex items-center justify-center">
               <form onSubmit={handelSubmit}>
                 <div className="mb-4">
-                  <label className="block">Region:</label>
+                  <label className="block text-lg">Region:</label>
                   <input
-                    className="border-2 mt-2 bg-white bg-opacity-20 backdrop-blur-lg p-2 rounded-lg w-96 h-10"
+                    className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96 h-10 "
                     type="text"
                     id="region"
                     name="region"
@@ -67,7 +70,7 @@ export default function Home() {
                 </div>
 
                 <div className="mb-4">
-                  <label className="block">Square Footage:</label>
+                  <label className="block text-lg">Square Footage:</label>
                   <input
                     className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96  h-10"
                     type="text"
@@ -78,7 +81,7 @@ export default function Home() {
                 </div>
 
                 <div className="mb-4">
-                  <label className="block">Bedrooms</label>
+                  <label className="block text-lg">Bedrooms</label>
                   <input
                     className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96 h-10"
                     type="text"
@@ -89,7 +92,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <label className="block">Bathrooms</label>
+                  <label className="block text-lg">Bathrooms</label>
                   <input
                     className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96 h-10"
                     type="text"

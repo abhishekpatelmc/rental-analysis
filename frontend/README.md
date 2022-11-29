@@ -1,5 +1,3 @@
 # Rental Analysis
 
-- [First Model](/firstModel/firstModel.ipynb)
-
-- [Second Model](/secondModel/SecondModel.ipynb)
+Front end for the Rental Analysis project.

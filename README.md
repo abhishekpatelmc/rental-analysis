@@ -74,7 +74,7 @@ uvicorn fastApi:main --reload
 - [@abhishekpatelmc](https://github.com/abhishekpatelmc)
 - [@NiraliAmrutiya](https://github.com/NiraliAmrutiya)
 - [@Tiwari-Ishita](https://github.com/Tiwari-Ishita)
-- [@Hetvi](https://github.com/abhishekpatelmc/rental-analysis/)
+- [@Hetvi](https://github.com/Hetvi2799)
 
 ## Support
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function rent() {
+export default function rentPreict() {
   const [data, setData] = useState();
 
   const handelSubmit = async (event) => {
@@ -106,7 +106,8 @@ export default function rent() {
           </div>
         </div>
       </div>
-      <div className="text-center mt-1">
+
+      <div className="text-center mt-10">
         {data && <h1 className="text-2xl ">Rent Estimate: {data}</h1>}
       </div>
     </div>

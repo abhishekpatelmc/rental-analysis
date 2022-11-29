@@ -1,5 +1,5 @@
 {
-  "name": "rental-analysis",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4"

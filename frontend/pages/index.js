@@ -35,15 +35,15 @@ export default function Home() {
   };
 
   return (
-    <>
-      <div className="text-center text-3xl mt-6 text-cyan-800">
+    <div className="bg-black h-screen">
+      <div className="text-center text-3xl pt-6 text-cyan-200">
         <h1>Rent Analysis</h1>
       </div>
 
       <div className="border-1 mt-8 ml-14 mr-14 mb-14 pl-16 pr-16 pt-16 pb-14 justify-center shadow-xl rounded-3xl bg-gray-100">
-        <div className=" flex flex-row justify-center">
+        <div className="flex flex-row justify-center">
           {/* Left Sidde */}
-          <div className="flex-1 basis-1/3 justify-end items-end">
+          <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
             <h1>Rent Analysis</h1>
             <p className=" mt-5 pr-10">
               This is a rent analysis tool that will help you Analys the rent of
@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="mb-4">
                   <label className="block">Region:</label>
                   <input
-                    className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96 h-10"
+                    className="border-2 mt-2 bg-white bg-opacity-20 backdrop-blur-lg p-2 rounded-lg w-96 h-10"
                     type="text"
                     id="region"
                     name="region"
@@ -116,6 +116,6 @@ export default function Home() {
           {data && <h1 className="text-2xl ">Rent Estimate: {data}</h1>}
         </div>
       </div>
-    </>
+    </div>
   );
 }

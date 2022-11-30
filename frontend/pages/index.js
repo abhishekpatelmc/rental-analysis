@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-slate-200 ">
+    <div className="bg-gray-100">
       <div className="text-center text-4xl pt-6 text-cyan-800">
         <h1>Rent Analysis</h1>
       </div>

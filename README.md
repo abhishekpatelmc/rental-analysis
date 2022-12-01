@@ -1,6 +1,6 @@
 # Rental Analysis
 
-> This a Rental Analysis project which analysis and predict the rental price of the house in the various reions.
+> This a Rental Analysis project which analysis and predict the rental price of the house in the various reions. This uses Machine Learning model for prediction.
 
 ## Demo
 

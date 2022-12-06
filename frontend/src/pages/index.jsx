@@ -4,54 +4,57 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-gray-50 h-screen">
-      <div className="text-center text-4xl pt-6 text-cyan-800">
-        <h1>Rent Analysis</h1>
+      <div className="text-center pt-6">
+        <h1 className="text-4xl font-bold text-cyan-800">Team DataDive</h1>
       </div>
 
       {/* Landing Area */}
-      <div className="border-1 mb-10 pl-16 pr-16 pt-16 pb-14 justify-center">
-        <div className="flex flex-row justify-center">
-          {/* Left Sidde */}
-          <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
-            <div className="mt-10  flex items-center justify-center">
-              <Image src="/cat.svg" height={300} width={500} alt="cat" />
-            </div>
-            <div className="mt-5 p-10 text-justify">
-              <p>
-                <b>Welcome! To rent analysis tool. </b>
-                <em>Let's help you to find you home in your budget!</em>
-
-                {/* This is a rent analysis tool that will help you Analys the rent of
-              a region. You need to enter the Region, number of bedrooms, number
-              of bathrooms and the Square feet required. */}
-              </p>
-              <p>
-                Looking at past rent trends, and using data from consumer
-                survey, we would be deriving the rent using prediction model.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <button className="w-40 bg-teal-600 rounded-2xl text-white py-1">
-                <Link href="/predict"> Predict</Link>
-              </button>
-            </div>
+      <div className=" flex mt-20 justify-around">
+        {/* Left Sidde */}
+        <div className="flex-1 mt-5  basis-1/5 ml-32">
+          <div>
+            <h1 className="text-6xl font-bold text-teal-600 ">Rent Analysis</h1>
           </div>
-          {/* Right Side */}
-          <div className="ml-10 flex-1 basis-1/4 ">
-            <div className="flex items-center justify-center">
-              <div className="mt-16 flex items-center justify-center">
-                <Image
-                  src="/rent-house.svg"
-                  height={500}
-                  width={500}
-                  alt="rent-house"
-                />
-              </div>
-            </div>
+          <div className="mt-2">
+            <p className="text-lg">
+              <b>Welcome! To rent analysis tool. </b>
+              <br />
+              <em>Let's help you to find you home in your budget!</em>
+            </p>
+          </div>
+          <div className="mt-4 pr-20">
+            <p className="text-lg text-justify">
+              Rental analysis tool is a tool that helps you to find your home in
+              your budget. We will predict the rent according region and other
+              factors like number of bedrooms, bathrooms, square feet. With this
+              you can compare the rent of different regions and find the best
+              place for you.
+            </p>
+          </div>
+          <div className="mt-10 flex gap-6">
+            <button className=" bg-teal-600 rounded-lg text-2xl text-white py-2 px-12 hover:border-2 hover:text-teal-900 hover:border-teal-600 hover:bg-gray-50">
+              <Link href="/predict">Predict</Link>
+            </button>
+            <button className=" text-teal-900 border-teal-600 border-2 rounded-lg text-2xl px-4 py-2 hover:bg-teal-600 hover:text-gray-50">
+              <Link href="https://github.com/abhishekpatelmc/rental-analysis/blob/main/Rent_Analysis.ipynb">
+                Rent Analysis
+              </Link>
+            </button>
+          </div>
+        </div>
+        {/* Right Side */}
+        <div className="flex-1  mt-10  basis-1/4">
+          <div className="ml-32">
+            <Image
+              src="/rent-house.svg"
+              height={500}
+              width={500}
+              alt="rent-house"
+            />
           </div>
         </div>
       </div>
-      <footer className="bg-teal-600 justify-center">
+      <footer className="bg-teal-600 justify-center absolute bottom-0 w-screen">
         <p className="text-center text-gray-50">
           Prepared by: Team - DATA DIVE
         </p>

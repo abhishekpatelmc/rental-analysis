@@ -45,11 +45,11 @@ export default function rentPreict() {
       <div className="border-1 ml-14 mr-14 pl-16 pr-16 pt-16 pb-10 justify-center shadow-2xl rounded-3xl bg-opacity-50 bg-gray-100">
         <div className="flex flex-row justify-center">
           {/* Left Sidde */}
-          <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
-            <p className=" mt-5 pr-5 text-justify">
-              This tool will help you to get predicted price of the region with
-              your desired requirement. On filling the form with your required
-              region, sqFeet, beds, & baths tool will show the predicted price.
+          <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg ml-5">
+            <p className=" mt-5  text-justify">
+              To get the prediction of the rent, please fill the form below.
+              Enter the details of number of bedrooms, bathrooms, square feet
+              and region. The prediction will be displayed below.
             </p>
             <div className="mt-16 flex items-center justify-center">
               <Image

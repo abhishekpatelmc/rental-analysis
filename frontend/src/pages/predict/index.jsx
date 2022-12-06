@@ -65,7 +65,7 @@ export default function rentPreict() {
             <div className="flex items-center justify-center">
               <form onSubmit={handelSubmit}>
                 <div className="mb-4">
-                  <label className="block text-lg">Region:</label>
+                  <label className="block text-lg">Region</label>
                   <input
                     className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96 h-10 "
                     type="text"
@@ -76,7 +76,7 @@ export default function rentPreict() {
                 </div>
 
                 <div className="mb-4">
-                  <label className="block text-lg">Square Footage:</label>
+                  <label className="block text-lg">Square Footage</label>
                   <input
                     className="border-2 mt-2 border-gray-300 p-2 rounded-lg w-96  h-10"
                     type="text"

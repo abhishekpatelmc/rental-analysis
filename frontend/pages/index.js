@@ -18,7 +18,7 @@ export default function Home() {
 
     const JSONData = JSON.stringify(data);
 
-    const endpoint = "https://fastapirentanalysis.herokuapp.com/predict";
+    const endpoint = "http://127.0.0.1:8000/predict";
 
     const options = {
       method: "POST",

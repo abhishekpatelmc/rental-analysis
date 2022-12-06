@@ -1,7 +1,7 @@
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
-export default function Home() {
+export default function rentPreict() {
   const [data, setData] = useState();
 
   const handelSubmit = async (event) => {
@@ -18,12 +18,14 @@ export default function Home() {
 
     const JSONData = JSON.stringify(data);
 
-    const endpoint = "http://127.0.0.1:8000/predict";
+    const endpoint = "https://fastapirentapp.herokuapp.com/predict";
+    // const endpoint = "http://127.0.0.1:8000/predict";
 
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSONData,
     };
@@ -36,52 +38,11 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gray-100">
-      <div className="text-center text-4xl pt-6 text-cyan-800">
-        <h1>Rent Analysis</h1>
+    <div>
+      <div className="text-center m-5">
+        <h1 className="text-4xl font-bold text-teal-700">Rent Prediction</h1>
       </div>
-
-      {/* Landing Area */}
-      <div className="border-1  mb-14 pl-16 pr-16 pt-16 pb-14 justify-center">
-        <div className="flex flex-row justify-center">
-          {/* Left Sidde */}
-          <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
-            <div className="mt-10  flex items-center justify-center">
-              <Image src="/cat.svg" height={300} width={500} alt="cat" />
-            </div>
-            <div className="mt-5 p-10 text-justify">
-              <p>
-                <b>Welcome! To rent analysis tool. </b>
-                <em>Let's help you to find you home in your budget!</em>
-
-                {/* This is a rent analysis tool that will help you Analys the rent of
-              a region. You need to enter the Region, number of bedrooms, number
-              of bathrooms and the Square feet required. */}
-              </p>
-              <p>
-                Looking at past rent trends, and using data from consumer
-                survey, we would be deriving the rent using prediction model.
-              </p>
-            </div>
-          </div>
-          {/* Right Side */}
-          <div className="ml-10 flex-1 basis-1/4 ">
-            <div className="flex items-center justify-center">
-              <div className="mt-16 flex items-center justify-center">
-                <Image
-                  src="/rent-house.svg"
-                  height={500}
-                  width={500}
-                  alt="rent-house"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Prediction  */}
-      <div className="border-1 mt-8 ml-14 mr-14 pl-16 pr-16 pt-16 pb-14 justify-center shadow-xl rounded-3xl bg-opacity-50 bg-gray-100">
+      <div className="border-1 ml-14 mr-14 pl-16 pr-16 pt-16 pb-10 justify-center shadow-2xl rounded-3xl bg-opacity-50 bg-gray-100">
         <div className="flex flex-row justify-center">
           {/* Left Sidde */}
           <div className="flex-1 basis-1/3 justify-end items-end font-sans text-lg">
@@ -150,7 +111,7 @@ export default function Home() {
                 <div className="mt-8">
                   <button
                     type="submit"
-                    className="bg-teal-600 text-gray-50 p-2 rounded-2xl text-md w-96 h-10"
+                    className="hover:bg-teal-600 border-2 border-teal-600 text-emerald-900 hover:text-gray-50 py-2 rounded-2xl text-md w-96"
                   >
                     Rent Estimate
                   </button>
@@ -159,17 +120,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-
         <div className="text-center mt-10">
           {data && (
-            <h1 className="text-2xl ">
+            <span className=" text-xl px-5 py-2 rounded-2xl bg-teal-700 text-gray-50 hover:border-2 hover:border-teal-700 hover:bg-slate-50 hover:text-teal-900">
               Average Rent: {data - 15} - {data + 15}
-            </h1>
+            </span>
           )}
         </div>
       </div>
-
-      <footer className="bg-teal-600 mt-14 justify-center">
+      <footer className="bg-teal-600 justify-center absolute bottom-0 w-screen">
         <p className="text-center text-gray-50">
           Prepared by: Team - DATA DIVE
         </p>
